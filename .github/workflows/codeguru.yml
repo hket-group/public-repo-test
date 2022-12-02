@@ -37,8 +37,8 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::727587131129:role/code-guru-role
-          aws-region: ap-southeast-1    
+          role-to-assume: arn:aws:iam::307534210433:role/github-to-terraform-private-registry
+          aws-region: ap-east-1    
 
       - name: AWS CodeGuru Reviewer Scanner
         uses: aws-actions/codeguru-reviewer@v1.1
