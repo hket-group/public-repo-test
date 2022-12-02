@@ -42,7 +42,8 @@ jobs:
           
       - name: Deploy release to s3    
         run: |
-          echo ::set-env repository_name=${{ github.event.repository.name#"public-" }}    
+          echo ::set-env repository_name=${{ github.event.repository.name#"public-" }}   
+          echo ${repository_name#"public-"}
 
 #       - name: AWS CodeGuru Reviewer Scanner
 #         uses: aws-actions/codeguru-reviewer@v1.1
