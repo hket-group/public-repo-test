@@ -34,15 +34,15 @@ jobs:
         with:
           fetch-depth: 0 
           
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          role-to-assume: arn:aws:iam::307534210433:role/github-to-terraform-private-registry
-          aws-region: ap-east-1    
+#       - name: Configure AWS Credentials
+#         uses: aws-actions/configure-aws-credentials@v1
+#         with:
+#           role-to-assume: arn:aws:iam::307534210433:role/github-to-terraform-private-registry
+#           aws-region: ap-east-1    
           
       - name: Deploy release to s3    
         run: |
-          echo ::set-env repository_name=${{ github.event.repository.name }}    
+          echo ::set-env repository_name=${{ github.event.repository.name#"public-" }}    
 
 #       - name: AWS CodeGuru Reviewer Scanner
 #         uses: aws-actions/codeguru-reviewer@v1.1
