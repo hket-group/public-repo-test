@@ -39,13 +39,17 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::307534210433:role/github-to-terraform-private-registry
           aws-region: ap-east-1    
+          
+      - name: Deploy release to s3    
+        run: |
+          echo ::set-env repository_name=${ github.event.repository.name#"public-" }    
 
-      - name: AWS CodeGuru Reviewer Scanner
-        uses: aws-actions/codeguru-reviewer@v1.1
-        with:
-          s3_bucket: codeguru-reviewer-github-bucket  
+#       - name: AWS CodeGuru Reviewer Scanner
+#         uses: aws-actions/codeguru-reviewer@v1.1
+#         with:
+#           s3_bucket: codeguru-reviewer-github-bucket  
  
-      - name: Upload review result
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: codeguru-results.sarif.json
+#       - name: Upload review result
+#         uses: github/codeql-action/upload-sarif@v2
+#         with:
+#           sarif_file: codeguru-results.sarif.json
