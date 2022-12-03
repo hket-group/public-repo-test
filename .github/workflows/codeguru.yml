@@ -55,6 +55,7 @@ jobs:
           echo $RELEASE_VERSION
           echo $REPOSITORY_NAME
           echo ${{ env.RELEASE_VERSION }}
+          echo "s3://hket-terraform-private-registry/v1/providers/hashicorp/$REPOSITORY_NAME/$RELEASE_VERSION/release"
 
 #       - name: AWS CodeGuru Reviewer Scanner
 #         uses: aws-actions/codeguru-reviewer@v1.1
