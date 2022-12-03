@@ -36,26 +36,34 @@ jobs:
         with:
           fetch-depth: 0 
           
-#       - name: Configure AWS Credentials
-#         uses: aws-actions/configure-aws-credentials@v1
-#         with:
-#           role-to-assume: arn:aws:iam::307534210433:role/github-to-terraform-private-registry
-#           aws-region: ap-east-1    
-          
-      - name: Deploy release to s3    
-        run: |
-          echo ::set-env repository_name=${{ github.event.repository.name }}   
+      - name: Configure AWS Credentials
+        id: aws_credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          # role-to-assume: arn:aws:iam::307534210433:role/github-to-terraform-private-registry
+          role-to-assume: arn:aws:iam::727587131129:role/s3_github_role
+          aws-region: ap-east-1    
 
       - name: Set env
         run: |
-          echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#*/public-}" >> $GITHUB_ENV
+          echo "REPOSITORY_NAME=${GITHUB_REPOSITORY}" >> $GITHUB_ENV
           echo "RELEASE_VERSION=${GITHUB_REF#refs/*/v}" >> $GITHUB_ENV
-      - name: Test
-        run: |
-          echo $RELEASE_VERSION
-          echo $REPOSITORY_NAME
-          echo ${{ env.RELEASE_VERSION }}
-          echo "s3://hket-terraform-private-registry/v1/providers/hashicorp/$REPOSITORY_NAME/$RELEASE_VERSION/release"
+
+      # - name: Test
+      #   run: |
+      #     echo $RELEASE_VERSION
+      #     echo $REPOSITORY_NAME
+      #     echo ${{ env.RELEASE_VERSION }}
+      # echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#*/public-}" >> $GITHUB_ENV
+
+      #     echo "s3://hket-terraform-private-registry/v1/providers/hashicorp/$REPOSITORY_NAME/$RELEASE_VERSION/release"
+
+      - name: Run python script
+        env:
+          REPOSITORY_NAME = $REPOSITORY_NAME
+          VERSION = $RELEASE_VERSION
+          # AWS_ACCESS_ID = ${{ steps.aws_credentials.outputs.access_id }}
+        run: python .github/workflows/versions.py    
 
 #       - name: AWS CodeGuru Reviewer Scanner
 #         uses: aws-actions/codeguru-reviewer@v1.1
