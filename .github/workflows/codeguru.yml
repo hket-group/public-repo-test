@@ -44,6 +44,7 @@ jobs:
         run: |
           echo ::set-env repository_name=${{ github.event.repository.name }}   
           echo ${repository_name#"public-"}
+          echo ::set-env version_tag=${{ github.event.release.tag_name#"v" }}
 
 #       - name: AWS CodeGuru Reviewer Scanner
 #         uses: aws-actions/codeguru-reviewer@v1.1
