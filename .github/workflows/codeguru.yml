@@ -47,10 +47,13 @@ jobs:
           echo ::set-env repository_name=${{ github.event.repository.name }}   
 
       - name: Set env
-        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+        run: |
+        echo "REPOSITORY_NAME"=${github.event.repository.name#public-} >> $GITHUB_ENV
+        echo "RELEASE_VERSION=${GITHUB_REF#refs/*/v}" >> $GITHUB_ENV
       - name: Test
         run: |
           echo $RELEASE_VERSION
+          echo $REPOSITORY_NAME
           echo ${{ env.RELEASE_VERSION }}
 
 #       - name: AWS CodeGuru Reviewer Scanner
