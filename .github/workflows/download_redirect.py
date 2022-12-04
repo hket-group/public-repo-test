@@ -68,7 +68,7 @@ def main():
 
 
 def push_to_s3(filename,s3_key):
-    subprocess.run(["aws","s3","cp",filename,s3_key],stdout=subprocess.PIPE, text=True)
+    subprocess.run(["aws","s3","cp",filename,s3_key],stdout=subprocess.PIPE, text=True).stdout
     # output = subprocess.run(["aws","s3","cp",filename,s3_key],stdout=subprocess.PIPE, text=True).stdout
     # print(output)   
 
@@ -76,8 +76,8 @@ def extend_versions():
     print("Checking 'versions' file in provider path...")
     file_exist = subprocess.run(["aws","s3api","head-object","--bucket",s3_bucket_name,"--key","v1/providers/hashicorp/"+repo_short+"/versions"],stdout=subprocess.PIPE, text=True).stdout
     if file_exist:
-        print(f"Getting versions file from s3 in v1/providers/hashicorp/{repo_short}/versions. ")
-        subprocess.run(["aws","s3","cp","s3://"+s3_bucket_name+"/v1/providers/hashicorp/"+repo_short+"/versions","."],stdout=subprocess.PIPE, text=True)
+        print(f"Getting versions file from s3 in {s3_bucket_name}/v1/providers/hashicorp/{repo_short}/versions. ")
+        subprocess.run(["aws","s3","cp","s3://"+s3_bucket_name+"/v1/providers/hashicorp/"+repo_short+"/versions","."],stdout=subprocess.PIPE, text=True).stdout
         # get_versions_from_s3 = subprocess.run(["aws","s3","cp","s3://"+s3_bucket_name+"/v1/providers/hashicorp/"+repo_short+"/versions","."],stdout=subprocess.PIPE, text=True).stdout
         # print(get_versions_from_s3)
 
@@ -108,6 +108,5 @@ def new_version_item():
     return extend_dict   
            
 if __name__ == "__main__":
-    pass
     main()
     extend_versions()
