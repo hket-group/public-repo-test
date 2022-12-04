@@ -2,12 +2,14 @@ import os
 import json
 import subprocess
 
+
+# s3_bucket_name = "hket-terraform-private-registry"
 # repository_name = os.environ.get("REPOSITORY_NAME")
 # repo_short = os.environ.get("REPOSITORY_NAME").removeprefix("terraform-provider-")
 # release_version = os.environ.get("VERSION")
 # fingerprint = os.environ.get("GPG_FINGERPRINT")
+# versions_file_location = f"s3://{s3_bucket_name}/v1/providers/hashicorp/{repo_short}/versions"
 
-# s3_bucket_name = "hket-terraform-private-registry"
 
 s3_bucket_name = "hket-custom-terraform-providers"
 repository_name = "terraform-provider-hket-ad"
@@ -18,7 +20,7 @@ versions_file_location = f"s3://{s3_bucket_name}/v1/providers/hashicorp/{repo_sh
 
 # print("Get repo name:",repository_name)
 # print("Get version:", release_version)
-# print("Get fingerprint:", fingerprint)
+print("Get fingerprint:", fingerprint)
 # print("remove prefix",repository_name.removeprefix("terraform-provider-"))
 
 def read_file(filename):
@@ -68,18 +70,16 @@ def main():
 
 
 def push_to_s3(filename,s3_key):
-    subprocess.run(["aws","s3","cp",filename,s3_key],stdout=subprocess.PIPE, text=True).stdout
-    # output = subprocess.run(["aws","s3","cp",filename,s3_key],stdout=subprocess.PIPE, text=True).stdout
-    # print(output)   
+    output = subprocess.run(["aws","s3","cp",filename,s3_key],stdout=subprocess.PIPE, text=True).stdout
+    print(output)   
 
 def extend_versions():
     print("Checking 'versions' file in provider path...")
     file_exist = subprocess.run(["aws","s3api","head-object","--bucket",s3_bucket_name,"--key","v1/providers/hashicorp/"+repo_short+"/versions"],stdout=subprocess.PIPE, text=True).stdout
     if file_exist:
         print(f"Getting versions file from s3 in {s3_bucket_name}/v1/providers/hashicorp/{repo_short}/versions. ")
-        subprocess.run(["aws","s3","cp","s3://"+s3_bucket_name+"/v1/providers/hashicorp/"+repo_short+"/versions","."],stdout=subprocess.PIPE, text=True).stdout
-        # get_versions_from_s3 = subprocess.run(["aws","s3","cp","s3://"+s3_bucket_name+"/v1/providers/hashicorp/"+repo_short+"/versions","."],stdout=subprocess.PIPE, text=True).stdout
-        # print(get_versions_from_s3)
+        get_versions_from_s3 = subprocess.run(["aws","s3","cp","s3://"+s3_bucket_name+"/v1/providers/hashicorp/"+repo_short+"/versions","."],stdout=subprocess.PIPE, text=True).stdout
+        print(get_versions_from_s3)
 
         body = read_file("versions")
         for item in body.get("versions"):

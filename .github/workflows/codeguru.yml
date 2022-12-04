@@ -66,7 +66,7 @@ jobs:
 
       #     echo "s3://hket-terraform-private-registry/v1/providers/hashicorp/$REPOSITORY_NAME/$RELEASE_VERSION/release"
 
-      - name: Run python script
+      - name: Python update registry S3 bucket
         env:
           REPOSITORY_NAME: $REPOSITORY_NAME
           VERSION: $RELEASE_VERSION
