@@ -15,13 +15,10 @@ repo_short = "hket-ad"
 release_version = "0.6.0"
 fingerprint = "asdbbb"
 
-print("Get repo name:",repository_name)
-print("Get version:", release_version)
-print("Get fingerprint:", fingerprint)
-
-print("remove prefix",repository_name.removeprefix("terraform-provider-"))
-
-
+# print("Get repo name:",repository_name)
+# print("Get version:", release_version)
+# print("Get fingerprint:", fingerprint)
+# print("remove prefix",repository_name.removeprefix("terraform-provider-"))
 
 def main():
     for os_ in ["darwin","freebsd","linux","windows"]:
@@ -51,10 +48,7 @@ def main():
                 }
             }
             
-            # filename = os.path.join("/Users/paulkuok/Desktop/public-repo-test/.github/workflows",arch,os_)
-            # os.makedirs(os.path.dirname(filename), exist_ok=True)
-            # with open(filename,'w') as f:
-            print("release_dict",release_dict)
+            print(f"Generating {os_}_{arch}...")
             with open(arch,'w+') as file:
                 json.dump(release_dict,file)
                 
@@ -68,5 +62,44 @@ def push_to_s3(filename,os_,arch):
 
     pass
 
+def extend_versions(release_version):
+    #check s3 have versions file
+    # if have, cp the file and open it to update
+    # if dont have, write new version file and upload
+    with open("/Users/paulkuok/Desktop/public-repo-test/versions",'r+') as versions_file:
+        body = json.load(versions_file)
+        for item in body.get("versions"):
+            if release_version in item['version']:
+                print("same version exist")
+                return
+
+        extend_dict = {"platforms":[],"protocols": ["5.0"],"version": release_version}
+
+        for os_ in ["darwin","freebsd","linux","windows"]:
+            archs = ["arm64","amd64","386","arm"] if os_ not in "darwin" else ["arm64","amd64"]
+            for arch in archs:
+                extend_dict["platforms"].append({"arch":arch,"os":os_})
+
+        body['versions'].append(extend_dict)
+        print(body)
+
+    with open ("/Users/paulkuok/Desktop/public-repo-test/versions",'w') as versions_file:
+        json.dump(body,versions_file)
+
+    s3_key = f"s3://{s3_bucket_name}/v1/providers/hashicorp/{repo_short}/versions"
+    output = subprocess.run(["aws","s3","cp","versions",s3_key],stdout=subprocess.PIPE, text=True)
+    print(output.stdout)    
+
+    #s3://hket-custom-terraform-providers/v1/providers/hashicorp/hket-ad/versions
 if __name__ == "__main__":
-    main()
+    pass
+    # main()
+    # extend_versions(release_version)
+
+    # output = subprocess.run(["aws","s3","cp","s3://hket-custom-terraform-providers/v1/providers/hashicorp/hket-ad/version","."],stdout=subprocess.PIPE, text=True)
+    # print(output.stdout)    
+
+    # output = subprocess.run(["aws","s3api","head-object","--bucket","hket-custom-terraform-providers","--key","v1/providers/hashicorp/hket-ad/version"],stdout=subprocess.PIPE, text=True)
+    # if "404" in output.stdout:
+    #     print("not found")
+    # print(output.stdout)
