@@ -63,7 +63,8 @@ def main():
 
 def push_to_s3(file,os_,arch):
     s3_key = f"s3://{s3_bucket_name}/v1/providers/hashicorp/{repo_short}/{release_version}/download/{os_}/{arch}"
-    subprocess.run(["aws","s3","sync",file,s3_key])
+    output = subprocess.run(["aws","s3","sync",file,s3_key],stdout=subprocess.PIPE, text=True)
+    print(output.stdout)
 
     pass
 
