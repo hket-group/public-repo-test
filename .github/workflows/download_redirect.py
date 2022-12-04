@@ -66,5 +66,6 @@ def push_to_s3(file,os_,arch):
     subprocess.run(["aws","s3","sync",file,s3_key])
 
     pass
-# if __name__ == "__main__":
-#     main()
+
+if __name__ == "__main__":
+    main()
