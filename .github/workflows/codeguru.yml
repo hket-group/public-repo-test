@@ -68,8 +68,8 @@ jobs:
 
       - name: Run python script
         env:
-          REPOSITORY_NAME = $REPOSITORY_NAME
-          VERSION         = $RELEASE_VERSION
+          REPOSITORY_NAME: $REPOSITORY_NAME
+          VERSION: $RELEASE_VERSION
           # GPG_FINGERPRINT = ${{ steps.import_gpg.outputs.fingerprint }}
           # AWS_ACCESS_ID = ${{ steps.aws_credentials.outputs.access_id }}
         run: python .github/workflows/download_redirect.py    
