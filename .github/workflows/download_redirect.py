@@ -55,7 +55,7 @@ def main():
             # os.makedirs(os.path.dirname(filename), exist_ok=True)
             # with open(filename,'w') as f:
             print("release_dict",release_dict)
-            with open(arch,'w') as file:
+            with open(arch,'w+') as file:
                 json.dump(release_dict,file)
                 
             push_to_s3(arch,os_,arch)    
