@@ -58,12 +58,12 @@ def main():
             with open(arch,'w') as file:
                 json.dump(release_dict,file)
                 
-            push_to_s3(file,os_,arch)    
+            push_to_s3(arch,os_,arch)    
 
 
-def push_to_s3(file,os_,arch):
+def push_to_s3(filename,os_,arch):
     s3_key = f"s3://{s3_bucket_name}/v1/providers/hashicorp/{repo_short}/{release_version}/download/{os_}/{arch}"
-    output = subprocess.run(["aws","s3","sync",file,s3_key],stdout=subprocess.PIPE, text=True)
+    output = subprocess.run(["aws","s3","sync",filename,s3_key],stdout=subprocess.PIPE, text=True)
     print(output.stdout)
 
     pass
