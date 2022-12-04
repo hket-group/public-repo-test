@@ -14,11 +14,21 @@ repository_name = "terraform-provider-hket-ad"
 repo_short = "hket-ad"
 release_version = "0.6.0"
 fingerprint = "asdbbb"
+versions_file_location = f"s3://{s3_bucket_name}/v1/providers/hashicorp/{repo_short}/versions"
 
 # print("Get repo name:",repository_name)
 # print("Get version:", release_version)
 # print("Get fingerprint:", fingerprint)
 # print("remove prefix",repository_name.removeprefix("terraform-provider-"))
+
+def read_file(filename):
+    with open(filename,'r') as file:
+        json_body = json.load(file)
+        return json_body
+
+def write_file(filename,content):
+    with open(filename,'w') as file:
+        json.dump(content,file) 
 
 def main():
     for os_ in ["darwin","freebsd","linux","windows"]:
@@ -52,54 +62,52 @@ def main():
             with open(arch,'w+') as file:
                 json.dump(release_dict,file)
                 
-            push_to_s3(arch,os_,arch)    
+            s3_key = f"s3://{s3_bucket_name}/v1/providers/hashicorp/{repo_short}/{release_version}/download/{os_}/{arch}"
+            push_to_s3(arch,s3_key)    
 
 
-def push_to_s3(filename,os_,arch):
-    s3_key = f"s3://{s3_bucket_name}/v1/providers/hashicorp/{repo_short}/{release_version}/download/{os_}/{arch}"
-    output = subprocess.run(["aws","s3","cp",filename,s3_key],stdout=subprocess.PIPE, text=True)
-    print(output.stdout)
 
-    pass
+def push_to_s3(filename,s3_key):
+    subprocess.run(["aws","s3","cp",filename,s3_key],stdout=subprocess.PIPE, text=True)
+    # output = subprocess.run(["aws","s3","cp",filename,s3_key],stdout=subprocess.PIPE, text=True).stdout
+    # print(output)   
 
-def extend_versions(release_version):
-    #check s3 have versions file
-    # if have, cp the file and open it to update
-    # if dont have, write new version file and upload
-    with open("/Users/paulkuok/Desktop/public-repo-test/versions",'r+') as versions_file:
-        body = json.load(versions_file)
+def extend_versions():
+    print("Checking 'versions' file in provider path...")
+    file_exist = subprocess.run(["aws","s3api","head-object","--bucket",s3_bucket_name,"--key","v1/providers/hashicorp/"+{repo_short}+"/versions"],stdout=subprocess.PIPE, text=True).stdout
+    if file_exist:
+        print(f"Getting versions file from s3 in v1/providers/hashicorp/{repo_short}/versions. ")
+        subprocess.run(["aws","s3","cp","s3://"+s3_bucket_name+"/v1/providers/hashicorp/"+repo_short+"/versions","."],stdout=subprocess.PIPE, text=True)
+        # get_versions_from_s3 = subprocess.run(["aws","s3","cp","s3://"+s3_bucket_name+"/v1/providers/hashicorp/"+repo_short+"/versions","."],stdout=subprocess.PIPE, text=True).stdout
+        # print(get_versions_from_s3)
+
+        body = read_file("versions")
         for item in body.get("versions"):
             if release_version in item['version']:
                 print("same version exist")
                 return
 
-        extend_dict = {"platforms":[],"protocols": ["5.0"],"version": release_version}
+        body['versions'].append(new_version_item())
+        versions_content = body
 
-        for os_ in ["darwin","freebsd","linux","windows"]:
-            archs = ["arm64","amd64","386","arm"] if os_ not in "darwin" else ["arm64","amd64"]
-            for arch in archs:
-                extend_dict["platforms"].append({"arch":arch,"os":os_})
+    else:
+        versions_content = {"versions":[new_version_item()]}
 
-        body['versions'].append(extend_dict)
-        print(body)
+    write_file("versions",versions_content)
+    push_to_s3("versions",versions_file_location)    
 
-    with open ("/Users/paulkuok/Desktop/public-repo-test/versions",'w') as versions_file:
-        json.dump(body,versions_file)
 
-    s3_key = f"s3://{s3_bucket_name}/v1/providers/hashicorp/{repo_short}/versions"
-    output = subprocess.run(["aws","s3","cp","versions",s3_key],stdout=subprocess.PIPE, text=True)
-    print(output.stdout)    
+def new_version_item():
+    extend_dict = {"platforms":[],"protocols": ["5.0"],"version": release_version}
 
-    #s3://hket-custom-terraform-providers/v1/providers/hashicorp/hket-ad/versions
+    for os_ in ["darwin","freebsd","linux","windows"]:
+        archs = ["arm64","amd64","386","arm"] if os_ not in "darwin" else ["arm64","amd64"]
+        for arch in archs:
+            extend_dict["platforms"].append({"arch":arch,"os":os_})
+
+    return extend_dict   
+           
 if __name__ == "__main__":
     pass
-    # main()
-    # extend_versions(release_version)
-
-    # output = subprocess.run(["aws","s3","cp","s3://hket-custom-terraform-providers/v1/providers/hashicorp/hket-ad/version","."],stdout=subprocess.PIPE, text=True)
-    # print(output.stdout)    
-
-    # output = subprocess.run(["aws","s3api","head-object","--bucket","hket-custom-terraform-providers","--key","v1/providers/hashicorp/hket-ad/version"],stdout=subprocess.PIPE, text=True)
-    # if "404" in output.stdout:
-    #     print("not found")
-    # print(output.stdout)
+    main()
+    extend_versions()
