@@ -51,25 +51,17 @@ jobs:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}    
 
-      # - name: Test
+      # - name: Set env
       #   run: |
-      #     echo $RELEASE_VERSION
-      #     echo $REPOSITORY_NAME
-      #     echo ${{ env.RELEASE_VERSION }}
-      # echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#*/public-}" >> $GITHUB_ENV
-
-      #     echo "s3://hket-terraform-private-registry/v1/providers/hashicorp/$REPOSITORY_NAME/$RELEASE_VERSION/release"
-
-      - name: Set env
-        run: |
-          echo "REPOSITORY_NAME=${GITHUB_REPOSITORY}" >> $GITHUB_ENV
-          echo "RELEASE_VERSION=${GITHUB_REF#refs/*/v}" >> $GITHUB_ENV
+      #     echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#hket-group/}" >> $GITHUB_ENV
+      #     echo "RELEASE_VERSION=${GITHUB_REF#refs/*/v}" >> $GITHUB_ENV
 
       - name: Python update registry S3 bucket
         env:
-          REPOSITORY_NAME: $REPOSITORY_NAME
-          VERSION: $RELEASE_VERSION
-          GPG_FINGERPRINT: ${{ steps.import_gpg.outputs.fingerprint }}
+          GPG_KEYID: ${{ steps.import_gpg.outputs.keyid }}
+          GPG_PUBLICKEY: ${{ secrets.GPG_PUBLIC_KEY }} 
+          GORELEASER_METADATA: ${{ steps.go_releaser.outputs.metadata }} 
+          GORELEASER_ARTIFACTS: ${{ steps.go_releaser.outputs.artifacts }} 
         run: python .github/workflows/download_redirect.py    
 
 #       - name: AWS CodeGuru Reviewer Scanner

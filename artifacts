@@ -1,0 +1,689 @@
+[
+    {
+        "name": "terraform-provider-hket-ad_v0.5.3",
+        "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_freebsd_386/terraform-provider-hket-ad_v0.5.3",
+        "goos": "freebsd",
+        "goarch": "386",
+        "internal_type": 4,
+        "type": "Binary",
+        "extra": {
+            "Binary": "terraform-provider-hket-ad_v0.5.3",
+            "Ext": "",
+            "ID": "terraform-provider-hket-ad"
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_v0.5.3",
+        "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_freebsd_amd64_v1/terraform-provider-hket-ad_v0.5.3",
+        "goos": "freebsd",
+        "goarch": "amd64",
+        "goamd64": "v1",
+        "internal_type": 4,
+        "type": "Binary",
+        "extra": {
+            "Binary": "terraform-provider-hket-ad_v0.5.3",
+            "Ext": "",
+            "ID": "terraform-provider-hket-ad"
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_v0.5.3",
+        "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_freebsd_arm64/terraform-provider-hket-ad_v0.5.3",
+        "goos": "freebsd",
+        "goarch": "arm64",
+        "internal_type": 4,
+        "type": "Binary",
+        "extra": {
+            "Binary": "terraform-provider-hket-ad_v0.5.3",
+            "Ext": "",
+            "ID": "terraform-provider-hket-ad"
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_v0.5.3",
+        "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_freebsd_arm_6/terraform-provider-hket-ad_v0.5.3",
+        "goos": "freebsd",
+        "goarch": "arm",
+        "goarm": "6",
+        "internal_type": 4,
+        "type": "Binary",
+        "extra": {
+            "Binary": "terraform-provider-hket-ad_v0.5.3",
+            "Ext": "",
+            "ID": "terraform-provider-hket-ad"
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_v0.5.3.exe",
+        "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_windows_386/terraform-provider-hket-ad_v0.5.3.exe",
+        "goos": "windows",
+        "goarch": "386",
+        "internal_type": 4,
+        "type": "Binary",
+        "extra": {
+            "Binary": "terraform-provider-hket-ad_v0.5.3",
+            "Ext": ".exe",
+            "ID": "terraform-provider-hket-ad"
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_v0.5.3.exe",
+        "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_windows_amd64_v1/terraform-provider-hket-ad_v0.5.3.exe",
+        "goos": "windows",
+        "goarch": "amd64",
+        "goamd64": "v1",
+        "internal_type": 4,
+        "type": "Binary",
+        "extra": {
+            "Binary": "terraform-provider-hket-ad_v0.5.3",
+            "Ext": ".exe",
+            "ID": "terraform-provider-hket-ad"
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_v0.5.3.exe",
+        "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_windows_arm_6/terraform-provider-hket-ad_v0.5.3.exe",
+        "goos": "windows",
+        "goarch": "arm",
+        "goarm": "6",
+        "internal_type": 4,
+        "type": "Binary",
+        "extra": {
+            "Binary": "terraform-provider-hket-ad_v0.5.3",
+            "Ext": ".exe",
+            "ID": "terraform-provider-hket-ad"
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_v0.5.3.exe",
+        "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_windows_arm64/terraform-provider-hket-ad_v0.5.3.exe",
+        "goos": "windows",
+        "goarch": "arm64",
+        "internal_type": 4,
+        "type": "Binary",
+        "extra": {
+            "Binary": "terraform-provider-hket-ad_v0.5.3",
+            "Ext": ".exe",
+            "ID": "terraform-provider-hket-ad"
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_v0.5.3",
+        "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_linux_amd64_v1/terraform-provider-hket-ad_v0.5.3",
+        "goos": "linux",
+        "goarch": "amd64",
+        "goamd64": "v1",
+        "internal_type": 4,
+        "type": "Binary",
+        "extra": {
+            "Binary": "terraform-provider-hket-ad_v0.5.3",
+            "Ext": "",
+            "ID": "terraform-provider-hket-ad"
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_v0.5.3",
+        "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_linux_386/terraform-provider-hket-ad_v0.5.3",
+        "goos": "linux",
+        "goarch": "386",
+        "internal_type": 4,
+        "type": "Binary",
+        "extra": {
+            "Binary": "terraform-provider-hket-ad_v0.5.3",
+            "Ext": "",
+            "ID": "terraform-provider-hket-ad"
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_v0.5.3",
+        "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_linux_arm_6/terraform-provider-hket-ad_v0.5.3",
+        "goos": "linux",
+        "goarch": "arm",
+        "goarm": "6",
+        "internal_type": 4,
+        "type": "Binary",
+        "extra": {
+            "Binary": "terraform-provider-hket-ad_v0.5.3",
+            "Ext": "",
+            "ID": "terraform-provider-hket-ad"
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_v0.5.3",
+        "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_linux_arm64/terraform-provider-hket-ad_v0.5.3",
+        "goos": "linux",
+        "goarch": "arm64",
+        "internal_type": 4,
+        "type": "Binary",
+        "extra": {
+            "Binary": "terraform-provider-hket-ad_v0.5.3",
+            "Ext": "",
+            "ID": "terraform-provider-hket-ad"
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_v0.5.3",
+        "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_darwin_amd64_v1/terraform-provider-hket-ad_v0.5.3",
+        "goos": "darwin",
+        "goarch": "amd64",
+        "goamd64": "v1",
+        "internal_type": 4,
+        "type": "Binary",
+        "extra": {
+            "Binary": "terraform-provider-hket-ad_v0.5.3",
+            "Ext": "",
+            "ID": "terraform-provider-hket-ad"
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_v0.5.3",
+        "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_darwin_arm64/terraform-provider-hket-ad_v0.5.3",
+        "goos": "darwin",
+        "goarch": "arm64",
+        "internal_type": 4,
+        "type": "Binary",
+        "extra": {
+            "Binary": "terraform-provider-hket-ad_v0.5.3",
+            "Ext": "",
+            "ID": "terraform-provider-hket-ad"
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_freebsd_arm.zip",
+        "path": "dist/terraform-provider-hket-ad_0.5.3_freebsd_arm.zip",
+        "goos": "freebsd",
+        "goarch": "arm",
+        "goarm": "6",
+        "internal_type": 1,
+        "type": "Archive",
+        "extra": {
+            "Binaries": [
+                "terraform-provider-hket-ad_v0.5.3"
+            ],
+            "Builds": [
+                {
+                    "name": "terraform-provider-hket-ad_v0.5.3",
+                    "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_freebsd_arm_6/terraform-provider-hket-ad_v0.5.3",
+                    "goos": "freebsd",
+                    "goarch": "arm",
+                    "goarm": "6",
+                    "internal_type": 4,
+                    "type": "Binary",
+                    "extra": {
+                        "Binary": "terraform-provider-hket-ad_v0.5.3",
+                        "Ext": "",
+                        "ID": "terraform-provider-hket-ad"
+                    }
+                }
+            ],
+            "Checksum": "sha256:08b192db9aeae16ff35ed232da1ba44bac6e3a13f534d324a7d6a6dab3a4e0e5",
+            "Format": "zip",
+            "ID": "default",
+            "Replaces": null,
+            "WrappedIn": ""
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_windows_arm.zip",
+        "path": "dist/terraform-provider-hket-ad_0.5.3_windows_arm.zip",
+        "goos": "windows",
+        "goarch": "arm",
+        "goarm": "6",
+        "internal_type": 1,
+        "type": "Archive",
+        "extra": {
+            "Binaries": [
+                "terraform-provider-hket-ad_v0.5.3.exe"
+            ],
+            "Builds": [
+                {
+                    "name": "terraform-provider-hket-ad_v0.5.3.exe",
+                    "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_windows_arm_6/terraform-provider-hket-ad_v0.5.3.exe",
+                    "goos": "windows",
+                    "goarch": "arm",
+                    "goarm": "6",
+                    "internal_type": 4,
+                    "type": "Binary",
+                    "extra": {
+                        "Binary": "terraform-provider-hket-ad_v0.5.3",
+                        "Ext": ".exe",
+                        "ID": "terraform-provider-hket-ad"
+                    }
+                }
+            ],
+            "Checksum": "sha256:9f2e738c2007b03d501cd4dcf6a9aa027cc92990cadb08d84f912374a7f78977",
+            "Format": "zip",
+            "ID": "default",
+            "Replaces": null,
+            "WrappedIn": ""
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_darwin_arm64.zip",
+        "path": "dist/terraform-provider-hket-ad_0.5.3_darwin_arm64.zip",
+        "goos": "darwin",
+        "goarch": "arm64",
+        "internal_type": 1,
+        "type": "Archive",
+        "extra": {
+            "Binaries": [
+                "terraform-provider-hket-ad_v0.5.3"
+            ],
+            "Builds": [
+                {
+                    "name": "terraform-provider-hket-ad_v0.5.3",
+                    "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_darwin_arm64/terraform-provider-hket-ad_v0.5.3",
+                    "goos": "darwin",
+                    "goarch": "arm64",
+                    "internal_type": 4,
+                    "type": "Binary",
+                    "extra": {
+                        "Binary": "terraform-provider-hket-ad_v0.5.3",
+                        "Ext": "",
+                        "ID": "terraform-provider-hket-ad"
+                    }
+                }
+            ],
+            "Checksum": "sha256:e4d2483f25c92d6cd1f27f3fcc2a174fc5e44a4cb6cb04d7263eaf4077b50b31",
+            "Format": "zip",
+            "ID": "default",
+            "Replaces": null,
+            "WrappedIn": ""
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_darwin_amd64.zip",
+        "path": "dist/terraform-provider-hket-ad_0.5.3_darwin_amd64.zip",
+        "goos": "darwin",
+        "goarch": "amd64",
+        "goamd64": "v1",
+        "internal_type": 1,
+        "type": "Archive",
+        "extra": {
+            "Binaries": [
+                "terraform-provider-hket-ad_v0.5.3"
+            ],
+            "Builds": [
+                {
+                    "name": "terraform-provider-hket-ad_v0.5.3",
+                    "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_darwin_amd64_v1/terraform-provider-hket-ad_v0.5.3",
+                    "goos": "darwin",
+                    "goarch": "amd64",
+                    "goamd64": "v1",
+                    "internal_type": 4,
+                    "type": "Binary",
+                    "extra": {
+                        "Binary": "terraform-provider-hket-ad_v0.5.3",
+                        "Ext": "",
+                        "ID": "terraform-provider-hket-ad"
+                    }
+                }
+            ],
+            "Checksum": "sha256:6421a822baaba53bc05748ccf31731aae264ae9fed28062a54b2300c7ed0d0e8",
+            "Format": "zip",
+            "ID": "default",
+            "Replaces": null,
+            "WrappedIn": ""
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_freebsd_386.zip",
+        "path": "dist/terraform-provider-hket-ad_0.5.3_freebsd_386.zip",
+        "goos": "freebsd",
+        "goarch": "386",
+        "internal_type": 1,
+        "type": "Archive",
+        "extra": {
+            "Binaries": [
+                "terraform-provider-hket-ad_v0.5.3"
+            ],
+            "Builds": [
+                {
+                    "name": "terraform-provider-hket-ad_v0.5.3",
+                    "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_freebsd_386/terraform-provider-hket-ad_v0.5.3",
+                    "goos": "freebsd",
+                    "goarch": "386",
+                    "internal_type": 4,
+                    "type": "Binary",
+                    "extra": {
+                        "Binary": "terraform-provider-hket-ad_v0.5.3",
+                        "Ext": "",
+                        "ID": "terraform-provider-hket-ad"
+                    }
+                }
+            ],
+            "Checksum": "sha256:a88f39ab76fae194c90a3d245b1d0ef8695b596f06c0217a78c62d55687944fe",
+            "Format": "zip",
+            "ID": "default",
+            "Replaces": null,
+            "WrappedIn": ""
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_freebsd_amd64.zip",
+        "path": "dist/terraform-provider-hket-ad_0.5.3_freebsd_amd64.zip",
+        "goos": "freebsd",
+        "goarch": "amd64",
+        "goamd64": "v1",
+        "internal_type": 1,
+        "type": "Archive",
+        "extra": {
+            "Binaries": [
+                "terraform-provider-hket-ad_v0.5.3"
+            ],
+            "Builds": [
+                {
+                    "name": "terraform-provider-hket-ad_v0.5.3",
+                    "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_freebsd_amd64_v1/terraform-provider-hket-ad_v0.5.3",
+                    "goos": "freebsd",
+                    "goarch": "amd64",
+                    "goamd64": "v1",
+                    "internal_type": 4,
+                    "type": "Binary",
+                    "extra": {
+                        "Binary": "terraform-provider-hket-ad_v0.5.3",
+                        "Ext": "",
+                        "ID": "terraform-provider-hket-ad"
+                    }
+                }
+            ],
+            "Checksum": "sha256:9bb5e95a87cfdd14f1b7bd88a80a84c8ccdc45544e6e20d4259252ad50aec6b9",
+            "Format": "zip",
+            "ID": "default",
+            "Replaces": null,
+            "WrappedIn": ""
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_linux_386.zip",
+        "path": "dist/terraform-provider-hket-ad_0.5.3_linux_386.zip",
+        "goos": "linux",
+        "goarch": "386",
+        "internal_type": 1,
+        "type": "Archive",
+        "extra": {
+            "Binaries": [
+                "terraform-provider-hket-ad_v0.5.3"
+            ],
+            "Builds": [
+                {
+                    "name": "terraform-provider-hket-ad_v0.5.3",
+                    "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_linux_386/terraform-provider-hket-ad_v0.5.3",
+                    "goos": "linux",
+                    "goarch": "386",
+                    "internal_type": 4,
+                    "type": "Binary",
+                    "extra": {
+                        "Binary": "terraform-provider-hket-ad_v0.5.3",
+                        "Ext": "",
+                        "ID": "terraform-provider-hket-ad"
+                    }
+                }
+            ],
+            "Checksum": "sha256:5a54dfa32574067adbabe88dc2cd53d31512cceac42a352aab37ac92ff9d3e59",
+            "Format": "zip",
+            "ID": "default",
+            "Replaces": null,
+            "WrappedIn": ""
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_linux_arm.zip",
+        "path": "dist/terraform-provider-hket-ad_0.5.3_linux_arm.zip",
+        "goos": "linux",
+        "goarch": "arm",
+        "goarm": "6",
+        "internal_type": 1,
+        "type": "Archive",
+        "extra": {
+            "Binaries": [
+                "terraform-provider-hket-ad_v0.5.3"
+            ],
+            "Builds": [
+                {
+                    "name": "terraform-provider-hket-ad_v0.5.3",
+                    "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_linux_arm_6/terraform-provider-hket-ad_v0.5.3",
+                    "goos": "linux",
+                    "goarch": "arm",
+                    "goarm": "6",
+                    "internal_type": 4,
+                    "type": "Binary",
+                    "extra": {
+                        "Binary": "terraform-provider-hket-ad_v0.5.3",
+                        "Ext": "",
+                        "ID": "terraform-provider-hket-ad"
+                    }
+                }
+            ],
+            "Checksum": "sha256:bf119f2d94942072bc6d4f3550d3c547245b2de17a41619234477e8d462c3801",
+            "Format": "zip",
+            "ID": "default",
+            "Replaces": null,
+            "WrappedIn": ""
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_linux_arm64.zip",
+        "path": "dist/terraform-provider-hket-ad_0.5.3_linux_arm64.zip",
+        "goos": "linux",
+        "goarch": "arm64",
+        "internal_type": 1,
+        "type": "Archive",
+        "extra": {
+            "Binaries": [
+                "terraform-provider-hket-ad_v0.5.3"
+            ],
+            "Builds": [
+                {
+                    "name": "terraform-provider-hket-ad_v0.5.3",
+                    "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_linux_arm64/terraform-provider-hket-ad_v0.5.3",
+                    "goos": "linux",
+                    "goarch": "arm64",
+                    "internal_type": 4,
+                    "type": "Binary",
+                    "extra": {
+                        "Binary": "terraform-provider-hket-ad_v0.5.3",
+                        "Ext": "",
+                        "ID": "terraform-provider-hket-ad"
+                    }
+                }
+            ],
+            "Checksum": "sha256:49039b0e470e4aa21b3095a204539521c4ae607ded43b43be49ead18fe9e2590",
+            "Format": "zip",
+            "ID": "default",
+            "Replaces": null,
+            "WrappedIn": ""
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_freebsd_arm64.zip",
+        "path": "dist/terraform-provider-hket-ad_0.5.3_freebsd_arm64.zip",
+        "goos": "freebsd",
+        "goarch": "arm64",
+        "internal_type": 1,
+        "type": "Archive",
+        "extra": {
+            "Binaries": [
+                "terraform-provider-hket-ad_v0.5.3"
+            ],
+            "Builds": [
+                {
+                    "name": "terraform-provider-hket-ad_v0.5.3",
+                    "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_freebsd_arm64/terraform-provider-hket-ad_v0.5.3",
+                    "goos": "freebsd",
+                    "goarch": "arm64",
+                    "internal_type": 4,
+                    "type": "Binary",
+                    "extra": {
+                        "Binary": "terraform-provider-hket-ad_v0.5.3",
+                        "Ext": "",
+                        "ID": "terraform-provider-hket-ad"
+                    }
+                }
+            ],
+            "Checksum": "sha256:9457330fae7eb46a57e35dcf4f7eafc97cb36de1c44649dc7cf295be013423d9",
+            "Format": "zip",
+            "ID": "default",
+            "Replaces": null,
+            "WrappedIn": ""
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_windows_amd64.zip",
+        "path": "dist/terraform-provider-hket-ad_0.5.3_windows_amd64.zip",
+        "goos": "windows",
+        "goarch": "amd64",
+        "goamd64": "v1",
+        "internal_type": 1,
+        "type": "Archive",
+        "extra": {
+            "Binaries": [
+                "terraform-provider-hket-ad_v0.5.3.exe"
+            ],
+            "Builds": [
+                {
+                    "name": "terraform-provider-hket-ad_v0.5.3.exe",
+                    "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_windows_amd64_v1/terraform-provider-hket-ad_v0.5.3.exe",
+                    "goos": "windows",
+                    "goarch": "amd64",
+                    "goamd64": "v1",
+                    "internal_type": 4,
+                    "type": "Binary",
+                    "extra": {
+                        "Binary": "terraform-provider-hket-ad_v0.5.3",
+                        "Ext": ".exe",
+                        "ID": "terraform-provider-hket-ad"
+                    }
+                }
+            ],
+            "Checksum": "sha256:e4fba178991921609cb7821e1665e4698669a652ec293c3ba93605a69254bc6b",
+            "Format": "zip",
+            "ID": "default",
+            "Replaces": null,
+            "WrappedIn": ""
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_windows_arm64.zip",
+        "path": "dist/terraform-provider-hket-ad_0.5.3_windows_arm64.zip",
+        "goos": "windows",
+        "goarch": "arm64",
+        "internal_type": 1,
+        "type": "Archive",
+        "extra": {
+            "Binaries": [
+                "terraform-provider-hket-ad_v0.5.3.exe"
+            ],
+            "Builds": [
+                {
+                    "name": "terraform-provider-hket-ad_v0.5.3.exe",
+                    "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_windows_arm64/terraform-provider-hket-ad_v0.5.3.exe",
+                    "goos": "windows",
+                    "goarch": "arm64",
+                    "internal_type": 4,
+                    "type": "Binary",
+                    "extra": {
+                        "Binary": "terraform-provider-hket-ad_v0.5.3",
+                        "Ext": ".exe",
+                        "ID": "terraform-provider-hket-ad"
+                    }
+                }
+            ],
+            "Checksum": "sha256:a03b0151c75bc8cdf6690d228112c620d34120bf3279aeb60edeb97bad6d2c76",
+            "Format": "zip",
+            "ID": "default",
+            "Replaces": null,
+            "WrappedIn": ""
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_windows_386.zip",
+        "path": "dist/terraform-provider-hket-ad_0.5.3_windows_386.zip",
+        "goos": "windows",
+        "goarch": "386",
+        "internal_type": 1,
+        "type": "Archive",
+        "extra": {
+            "Binaries": [
+                "terraform-provider-hket-ad_v0.5.3.exe"
+            ],
+            "Builds": [
+                {
+                    "name": "terraform-provider-hket-ad_v0.5.3.exe",
+                    "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_windows_386/terraform-provider-hket-ad_v0.5.3.exe",
+                    "goos": "windows",
+                    "goarch": "386",
+                    "internal_type": 4,
+                    "type": "Binary",
+                    "extra": {
+                        "Binary": "terraform-provider-hket-ad_v0.5.3",
+                        "Ext": ".exe",
+                        "ID": "terraform-provider-hket-ad"
+                    }
+                }
+            ],
+            "Checksum": "sha256:9f0f3fc3a27939a9d819af699dbe1088f6a1016c4bf2adea65642f3b7150c7a8",
+            "Format": "zip",
+            "ID": "default",
+            "Replaces": null,
+            "WrappedIn": ""
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_linux_amd64.zip",
+        "path": "dist/terraform-provider-hket-ad_0.5.3_linux_amd64.zip",
+        "goos": "linux",
+        "goarch": "amd64",
+        "goamd64": "v1",
+        "internal_type": 1,
+        "type": "Archive",
+        "extra": {
+            "Binaries": [
+                "terraform-provider-hket-ad_v0.5.3"
+            ],
+            "Builds": [
+                {
+                    "name": "terraform-provider-hket-ad_v0.5.3",
+                    "path": "/home/runner/work/terraform-provider-hket-ad/terraform-provider-hket-ad/dist/terraform-provider-hket-ad_linux_amd64_v1/terraform-provider-hket-ad_v0.5.3",
+                    "goos": "linux",
+                    "goarch": "amd64",
+                    "goamd64": "v1",
+                    "internal_type": 4,
+                    "type": "Binary",
+                    "extra": {
+                        "Binary": "terraform-provider-hket-ad_v0.5.3",
+                        "Ext": "",
+                        "ID": "terraform-provider-hket-ad"
+                    }
+                }
+            ],
+            "Checksum": "sha256:f2d7452cce7b423e306b78f338ce4c49b88eaad223514bd71668642815b4faab",
+            "Format": "zip",
+            "ID": "default",
+            "Replaces": null,
+            "WrappedIn": ""
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_SHA256SUMS",
+        "path": "dist/terraform-provider-hket-ad_0.5.3_SHA256SUMS",
+        "internal_type": 12,
+        "type": "Checksum",
+        "extra": {}
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_SHA256SUMS.sig",
+        "path": "dist/terraform-provider-hket-ad_0.5.3_SHA256SUMS.sig",
+        "internal_type": 13,
+        "type": "Signature",
+        "extra": {
+            "ID": "default"
+        }
+    },
+    {
+        "name": "terraform-provider-hket-ad_0.5.3_manifest.json",
+        "path": "terraform-registry-manifest.json",
+        "internal_type": 3,
+        "type": "File"
+    }
+]
