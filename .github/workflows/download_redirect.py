@@ -108,5 +108,6 @@ def new_version_item():
     return extend_dict   
            
 if __name__ == "__main__":
-    main()
-    extend_versions()
+    pass
+    # main()
+    # extend_versions()
