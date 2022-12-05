@@ -7,7 +7,7 @@ import subprocess
 # repository_name = os.environ.get("REPOSITORY_NAME")
 # repo_short = os.environ.get("REPOSITORY_NAME").removeprefix("terraform-provider-")
 # release_version = os.environ.get("VERSION")
-# fingerprint = os.environ.get("GPG_FINGERPRINT")
+fingerprint = os.environ.get("GPG_FINGERPRINT")
 # versions_file_location = f"s3://{s3_bucket_name}/v1/providers/hashicorp/{repo_short}/versions"
 
 
@@ -15,7 +15,7 @@ s3_bucket_name = "hket-custom-terraform-providers"
 repository_name = "terraform-provider-hket-ad"
 repo_short = "hket-ad"
 release_version = "0.6.0"
-fingerprint = "asdbbb"
+# fingerprint = "asdbbb"
 versions_file_location = f"s3://{s3_bucket_name}/v1/providers/hashicorp/{repo_short}/versions"
 
 # print("Get repo name:",repository_name)
