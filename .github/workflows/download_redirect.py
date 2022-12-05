@@ -113,7 +113,7 @@ def push_to_s3(filename,s3_key):
 
 def get_shasum(filename):
     print(filename)
-    with open('../../artifacts','r') as file:
+    with open('artifacts','r') as file:
         body = json.load(file)
         for item in body:
             if item.get('name') == filename:
